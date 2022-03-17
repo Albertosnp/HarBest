@@ -14,18 +14,17 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const { _id, SKU } = product;
-  const active = watch("active");
-  const { name, description, price } = product;
+  const { name, description, price, active } = product;
 
   const onSubmit = (data) => {
     let { name, description, price, active } = data;
     name = name.trim();
     description = description.trim();
     price = parseFloat(price);
+    active = String(active);
 
     onSubmitModel && onSubmitModel({ _id, name, description, price, SKU, active });
   };
@@ -71,7 +70,7 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
             {...register("active")}
             type="checkbox"
             className="form__input"
-            defaultChecked={!!active}
+            defaultChecked={active}
           />
         </label>
         <button type="submit" className="form__submit">

@@ -2,6 +2,7 @@ import axios from "axios";
 
 const API_URL = "http://localhost:9000/";
 export const setProductAPI = async (newProduct) => {
+  console.log({ newProduct });
   const response = await axios.create({
     baseURL: API_URL,
     headers: {
