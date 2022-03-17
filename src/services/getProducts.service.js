@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_URL = "http://localhost:9000/";
 
-export const getProducts = async ({ page }) => {
+export const getProductsAPI = async ({ page = 0, active = true }) => {
   const response = await axios
     .create({
       baseURL: API_URL,
@@ -12,7 +12,7 @@ export const getProducts = async ({ page }) => {
       params: {
         itemsPerPage: 4,
         page,
-        active: true,
+        active,
       },
     })
     .get("/products");
