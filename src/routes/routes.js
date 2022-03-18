@@ -5,7 +5,7 @@ import {
   Routes,
 } from "react-router-dom";
 import { ProductDetail } from "../components/ProductDetail/ProductDetail";
-import { Home } from "../views/Home";
+import { Home } from "../views/Home/Home";
 
 export const RoutesApp = () => {
   return (
