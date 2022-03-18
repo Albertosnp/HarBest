@@ -6,6 +6,7 @@ import { setProductAPI } from "../../services/setProduct.service";
 import { setProductAction } from "../../store/reducers/productsStore";
 import { Form } from "../Form/Form";
 import { Product } from "../Product/Product";
+import ProductDetailStyled from "./ProductDetail.styled";
 
 export const ProductDetail = () => {
   const { id } = useParams();
@@ -18,7 +19,6 @@ export const ProductDetail = () => {
   };
 
   const handleModifyProduct = (product) => {
-  
     const apiFetch = async () => {
       const { _id, name, price, description, active } = product;
       const objectToSend = {
@@ -39,25 +39,42 @@ export const ProductDetail = () => {
   };
 
   return (
-    <div className="productDetail">
+    <ProductDetailStyled className="productDetail">
       {loading ? (
-        <div>Cargando...</div>
+        <p>Cargando...</p>
       ) : (
-        <div>
-          <Product {...product} />
+        <div className="productDetail__mainBlock">
+          <div className="productDetail__mainBlock__item">
+            <Product {...product} />
+          </div>
+          <Link to="/">
+            <button
+              className="productDetail__mainBlock__button"
+              children="Volver"
+            />
+          </Link>
+          {!showEditForm ? (
+            <button
+              className="productDetail__mainBlock__button"
+              onClick={handlerClick}
+              children="Editar"
+            />
+          ) : (
+            <button
+              className="productDetail__mainBlock__button"
+              onClick={handlerClick}
+              children="Ocultar"
+            />
+          )}
         </div>
       )}
-      <div>
-        {!showEditForm && <button onClick={handlerClick}>Editar</button>}
+      <div className="productDetail__secondBlock">
         {showEditForm && (
           <>
-            <button onClick={handlerClick}>Ocultar</button>
             <Form product={product} onSubmitModel={handleModifyProduct} />
           </>
         )}
       </div>
-      <Link to="/"><button children="Volver"/></Link>
-      
-    </div>
+    </ProductDetailStyled>
   );
 };

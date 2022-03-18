@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 const FormStyled = styled.div`
   display: grid;
-  place-items: center;
-  width: 100%;
+  place-content: center;
   margin-top: 2rem;
   .form {
     &__box {
