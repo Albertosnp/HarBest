@@ -4,6 +4,7 @@ const FormStyled = styled.div`
   display: grid;
   place-content: center;
   margin-top: 2rem;
+  justify-items: center;
   .form {
     &__box {
       display: grid;

@@ -37,7 +37,7 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
         </label>
           <input
             type="text"
-            {...register("name")}
+            {...register("name", { required: true} ) }
             placeholder="Nombre de producto"
             className="form__input"
             defaultValue={name}
@@ -47,7 +47,7 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
         </label>
           <input
             type="text"
-            {...register("description")}
+            {...register("description", { required: true})}
             placeholder="Descripción"
             className="form__input"
             defaultValue={description}
@@ -57,7 +57,7 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
         </label>
           <input
             type="number"
-            {...register("price")}
+            {...register("price", { required: true})}
             placeholder="Precio"
             className="form__input"
             defaultValue={price}
