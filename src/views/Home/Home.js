@@ -67,7 +67,7 @@ export const Home = () => {
             )}
             <button
               className="home__buttons--create"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/form")}
             >
               Crear nuevo producto
             </button>

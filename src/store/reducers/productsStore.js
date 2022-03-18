@@ -25,6 +25,11 @@ export const productsReducer = (state = initialState, { type, payload }) => {
         ...state,
         products: state.products.filter((product) => product._id !== payload._id),
       };
+    case "@products/addProduct":
+      return {
+        ...state,
+        products: [...state.products, payload],
+      };
     default:
       return state;
   }
@@ -65,3 +70,12 @@ export const deleteProductAction = (product) => {
     },
   };
 }
+
+export const addProductAction = (newProduct) => {
+  return {
+    type: "@products/addProduct",
+    payload: {
+      ...newProduct,
+    },
+  };
+};
