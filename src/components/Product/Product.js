@@ -1,10 +1,12 @@
+import ProductStyled from "./Product.styled";
+
 export const Product = ({ name, description, price }) => {
  
   return (
-    <div>
-      <h1>{name}</h1>
-      <p>{description}</p>
-      <p>{price}</p>
-    </div>
+    <ProductStyled className="product">
+      <h2 className="product__title">{name}</h2>
+      <p className="product__description">{description}</p>
+      <p className="product__precio">Precio: {price}</p>
+    </ProductStyled>
   );
 };
