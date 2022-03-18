@@ -35,6 +35,16 @@ const ProductDetailStyled = styled.div`
         background-color: #ffc107;
         transition: all 0.3s ease;
       }
+
+      &--delete {
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 25px;
+        cursor: pointer;
+        color: white;
+        margin: 10px 10px 10px 0;
+      }
     }
   }
 `;

@@ -20,6 +20,11 @@ export const productsReducer = (state = initialState, { type, payload }) => {
           return product;
         }),
       };
+    case "@products/deleteProduct":
+      return {
+        ...state,
+        products: state.products.filter((product) => product._id !== payload._id),
+      };
     default:
       return state;
   }
@@ -51,3 +56,12 @@ export const setProductAction = (newProduct) => {
     },
   };
 };
+
+export const deleteProductAction = (product) => {
+  return {
+    type: "@products/deleteProduct",
+    payload: {
+      ...product,
+    },
+  };
+}
