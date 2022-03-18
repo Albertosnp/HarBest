@@ -56,9 +56,8 @@ export const ProductDetail = () => {
           </>
         )}
       </div>
-      <button>
-        <Link to="/">Volver</Link>
-      </button>
+      <Link to="/"><button children="Volver"/></Link>
+      
     </div>
   );
 };

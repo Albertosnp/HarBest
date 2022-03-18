@@ -32,8 +32,9 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
   return (
     <FormStyled className="form">
       <form onSubmit={handleSubmit(onSubmit)} className="form__box">
-        <label>
+        <label className="form__label">
           Nombre:
+        </label>
           <input
             type="text"
             {...register("name")}
@@ -41,9 +42,9 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
             className="form__input"
             defaultValue={name}
           />
-        </label>
-        <label>
+        <label className="form__label">
           Descripción:
+        </label>
           <input
             type="text"
             {...register("description")}
@@ -51,9 +52,9 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
             className="form__input"
             defaultValue={description}
           />
-        </label>
-        <label>
+        <label className="form__label">
           Precio:
+        </label>
           <input
             type="number"
             {...register("price")}
@@ -62,9 +63,9 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
             defaultValue={price}
             step="any"
           />
-        </label>
-        <label>
+        <label className="form__label">
           Estado: {active ? "Activo" : "Inactivo"}
+        </label>
           <input
             name="active"
             {...register("active")}
@@ -72,9 +73,8 @@ export const Form = ({ product = INITIAL_STATE, onSubmitModel }) => {
             className="form__input"
             defaultChecked={active}
           />
-        </label>
-        <button type="submit" className="form__submit">
-          Submit
+        <button className="form__button">
+          Enviar
         </button>
       </form>
     </FormStyled>
