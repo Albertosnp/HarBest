@@ -76,7 +76,7 @@ export const Home = () => {
             {products &&
               products?.map((product) => (
                 <ArticleItem
-                  className="home__section--item"
+                  className="home__section__item"
                   key={product._id}
                   children={
                     <Link

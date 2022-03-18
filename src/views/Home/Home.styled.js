@@ -9,7 +9,7 @@ const HomeStyled = styled.div`
   position: absolute;
   left: 50px;
   right: 50px;
-  
+
   .home {
     &__buttons {
       display: grid;
@@ -23,6 +23,11 @@ const HomeStyled = styled.div`
         padding: 8px 20px;
         cursor: pointer;
         color: white;
+        &:hover {
+          outline: none;
+          background-color: #ffc107;
+          transition: all 0.3s ease;
+        }
       }
       &--create {
         border: none;
@@ -31,6 +36,11 @@ const HomeStyled = styled.div`
         padding: 8px 20px;
         cursor: pointer;
         color: white;
+        &:hover {
+          outline: none;
+          background-color: #ffc107;
+          transition: all 0.3s ease;
+        }
       }
     }
 
@@ -42,8 +52,7 @@ const HomeStyled = styled.div`
         text-decoration: none;
         color: black;
       }
-      &--item {
-        
+      &__item {
         margin: 5px 10px;
         padding: 5px 20px;
         border-radius: 5px;
@@ -52,10 +61,10 @@ const HomeStyled = styled.div`
         justify-content: space-between;
         background-color: #f0f0f0;
         &:hover {
-          transition: all 0.5s ease;
+          transition: all 0.3s ease;
           background-color: #cccc;
-          box-shadow: 0px 0px 10px #cedede;
-          scale: 1.1;
+          box-shadow: 0px 0px 5px #000000;
+          /* scale: 1.1; */
         }
       }
     }
@@ -63,7 +72,6 @@ const HomeStyled = styled.div`
     &__pagination {
       position: absolute;
       top: 500px;
-    
 
       &__button {
         border: none;
@@ -72,10 +80,14 @@ const HomeStyled = styled.div`
         padding: 8px 20px;
         cursor: pointer;
         color: white;
+        &:hover {
+          outline: none;
+          background-color: #ffc107;
+          transition: all 0.3s ease;
+        }
       }
     }
   }
-
 `;
 
 export default HomeStyled;
