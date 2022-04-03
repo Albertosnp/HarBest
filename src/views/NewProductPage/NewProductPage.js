@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addProductAPI } from "../../services/addProduct.service";
-import { addProductAction } from "../../store/reducers/productsStore";
-import { Form } from "../Form/Form";
+import { addProductAPI } from "services/addProduct.service";
+import { addProductAction } from "store/reducers/productsStore";
+import { Form } from "components/Form/Form";
 import NewProductPageStyled from "./NewProductPage.styled";
 
 export const NewProductPage = () => {

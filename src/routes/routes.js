@@ -4,9 +4,9 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import { NewProductPage } from "../components/NewProductPage/NewProductPage";
-import { ProductDetail } from "../components/ProductDetail/ProductDetail";
-import { Home } from "../views/Home/Home";
+import { NewProductPage } from "views/NewProductPage/NewProductPage";
+import { ProductDetail } from "components/ProductDetail/ProductDetail";
+import { Home } from "views/Home/Home";
 
 export const RoutesApp = () => {
   return (

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { useFilterProductForId } from "../../hooks/useFilterProductForId";
-import { deleteProductAPI } from "../../services/deleteProduct.service";
-import { setProductAPI } from "../../services/setProduct.service";
-import { deleteProductAction, setProductAction } from "../../store/reducers/productsStore";
-import { Form } from "../Form/Form";
-import { Product } from "../Product/Product";
+import { useFilterProductForId } from "hooks/useFilterProductForId";
+import { deleteProductAPI } from "services/deleteProduct.service";
+import { setProductAPI } from "services/setProduct.service";
+import { deleteProductAction, setProductAction } from "store/reducers/productsStore";
+import { Form } from "Form/Form";
+import { Product } from "Product/Product";
 import ProductDetailStyled from "./ProductDetail.styled";
 
 export const ProductDetail = () => {
